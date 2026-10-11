@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weather Worldwide | Live Forecasts &amp; Conditions</title>
+<meta name="description" content="Live weather, hourly and 10-day forecasts for any city in the world.">
+<meta property="og:title" content="Weather Worldwide | Live Forecasts &amp; Conditions">
+<meta property="og:description" content="Search any city and get current conditions, hourly and daily forecasts.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-sky="clear" data-page="home">
+<a class="skip" href="#view">Skip to content</a>
+<header class="bar">
+  <a class="logo" href="#/">Skyline</a>
+  <button class="icon-btn menu" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">☰</button>
+  <nav id="nav" aria-label="Main">
+    <a href="#/" data-p="home">Home</a>
+    <a href="#/weather" data-p="weather">Weather</a>
+    <a href="#/about" data-p="about">About</a>
+    <a href="#/settings" data-p="settings">Settings</a>
+  </nav>
+  <button class="icon-btn" id="unitBtn" aria-label="Switch temperature unit">°C</button>
+  <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">◐</button>
+</header>
+<section class="find" id="find">
+  <h1>Weather, wherever you are.</h1>
+  <p>Search any city, country or postal code and get live conditions and forecasts.</p>
+  <form id="searchForm" role="search" autocomplete="off">
+    <label for="q" class="sr">Search city, country, or location</label>
+    <div class="sbox">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="q" type="search" placeholder="Search city, country, or location..." role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
+      <button class="btn" type="submit" id="goBtn">Search</button>
+    </div>
+    <ul id="results" role="listbox" hidden></ul>
+  </form>
+  <p class="chips" id="chips"></p>
+</section>
+<main id="view" tabindex="-1"></main>
+<footer>
+  <div><b>Skyline</b> &nbsp; <a href="#/">Home</a> <a href="#/weather">Weather</a> <a href="#/about">About</a> <a href="#/settings">Settings</a></div>
+  <p>Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a> (CC BY 4.0). Forecasts are estimates and can change. &copy; 2026 Skyline</p>
+</footer>
+<script src="api.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
